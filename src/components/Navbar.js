@@ -5,11 +5,9 @@ import PropTypes from 'prop-types'
 export default function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            {props.title}
-          </a>
+          <a className="navbar-brand" href="/">{props.title}</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -41,7 +39,7 @@ export default function Navbar(props) {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-danger" type="submit">
                 Search
               </button>
             </form>
@@ -52,3 +50,11 @@ export default function Navbar(props) {
   );
 }
 
+Navbar.defaultProps = {
+  title: PropTypes.string,
+  aboutText: PropTypes.string
+}
+Navbar.defaultProps = {
+  title: 'Set title here',
+  aboutText: 'About text here'
+};
